@@ -11,7 +11,7 @@ static Scanner in = new Scanner(System.in);
 		System.out.println("Digite a altura");
 		triangulo1.altura = in.nextDouble();
 		
-		System.out.println("A area do triangulo �: "+triangulo1.calcularArea());
+		System.out.println("A area do triangulo é: "+triangulo1.calcularArea());
 		
 		Retangulo retangulo1 = new Retangulo();
 		
@@ -21,7 +21,7 @@ static Scanner in = new Scanner(System.in);
 		System.out.println("Digite a altura");
 		retangulo1.altura = in.nextDouble();
 		
-		System.out.println("A area do triangulo �: "+retangulo1.calcularArea());
+		System.out.println("A area do triangulo é: "+retangulo1.calcularArea());
 	}
 
 }
