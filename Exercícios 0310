@@ -1,1 +1,130 @@
+import java.util.Scanner;
+public class Principal {
+static Scanner in = new Scanner(System.in);
+	public static void main(String[] args) {
+
+		Triangulo triangulo1 = new Triangulo();
+		
+		System.out.println("\nCalcular triangulo");
+		System.out.println("Digite a base");
+		triangulo1.base = in.nextDouble();
+		System.out.println("Digite a altura");
+		triangulo1.altura = in.nextDouble();
+		
+		System.out.println("A area do triangulo é: "+triangulo1.calcularArea());
+		
+		Retangulo retangulo1 = new Retangulo();
+		
+		System.out.println("\nCalcular retangulo");
+		System.out.println("Digite a base");
+		retangulo1.base = in.nextDouble();
+		System.out.println("Digite a altura");
+		retangulo1.altura = in.nextDouble();
+		
+		System.out.println("A area do triangulo é: "+retangulo1.calcularArea());
+	}
+
+}
+
+public class Retangulo {
+
+	double altura;
+	double base;
+	
+	double calcularArea(){
+		
+		return base*altura;
+	}
+}
+
+public class Triangulo {
+
+	double altura;
+	double base;
+	
+	double calcularArea(){
+		
+		return base*altura/2;
+	}
+}
+
+_________________________________________________________________________
+
+import java.util.Scanner;
+public class Principal {
+	static Scanner in=new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		Calculadora calculo1 = new Calculadora();
+		
+		System.out.println("Digite o 1° numero");
+		calculo1.num1 = in.nextDouble();
+		System.out.println("Digite o 2° numero");
+		calculo1.num2 = in.nextDouble();
+		
+		System.out.println("\nA soma dos numeros é: "+calculo1.somar());
+		System.out.println("A divisão dos numeros é: "+calculo1.dividir());
+		System.out.println("A subtração dos numeros é: "+calculo1.subtrair());
+		System.out.println("A multiplicação dos numeros é: "+calculo1.multiplicar());
+	}
+
+}
+
+
+public class Calculadora {
+
+	double num1;
+	double num2;
+	
+	double somar(){
+		return num1 + num2;
+	}
+	double dividir(){
+		return num1 / num2;
+	}
+	double subtrair(){
+		return num1 - num2;
+	}
+	double multiplicar(){
+		return num1*num2;
+	}
+}
+
+
+_________________________________________________________________________
+
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+	Scanner Pessoa = new Scanner (System.in);
+	
+	Pessoa PrimeiraPessoa = new Pessoa();
+	 System.out.println("Digite o nome da pessoa");
+	 PrimeiraPessoa.nome = Pessoa.next();
+	 System.out.println("Digite o sobrenome da pessoa");
+	 PrimeiraPessoa.sobrenome = Pessoa.next();
+	 System.out.println("Digite o ano de nascimento da pessoa");
+	 PrimeiraPessoa.AnodeNascimento= Pessoa.nextInt();
+	 
+	 System.out.println("\nNome completo: "+PrimeiraPessoa.nomeCompleto());
+	 System.out.println("Idade: "+PrimeiraPessoa.calcularIdade());
+	}
+
+}
+
+public class Pessoa {
+
+	String nome;
+	String sobrenome;
+	int AnodeNascimento;
+	
+	int calcularIdade(){
+	return 2020 - AnodeNascimento;
+	}
+	
+	String nomeCompleto(){
+	return nome + sobrenome;	
+	}
+}
 
